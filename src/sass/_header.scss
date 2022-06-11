@@ -1,5 +1,4 @@
 .text {
-
   width: 400px;
   margin-bottom: 25px;
   margin-left: 25px;
@@ -7,6 +6,30 @@
   font-weight: 400;
   font-size: 30px;
   letter-spacing: 1.17;
-  color: red;
+  color: violet;
   background-color: black;
+}
+@mixin mobile {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+//////////////////////////
+@mixin media($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
 }
