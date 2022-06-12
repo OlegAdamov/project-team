@@ -1,0 +1,83 @@
+/////////////Скидання стилів////////////////
+p, 
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+/*Стилізація списку*/
+ul, ol {
+    margin: 0;
+    padding-left: 0;
+}
+/*Відміна крапочок у списках*/
+.list {
+    list-style-type: none;
+}
+///////////Контейнер///////////////////
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    @media screen and (min-width:320px) {
+        max-width: 320px;
+    }
+    @media screen and (min-width:768px) {
+        max-width: 768px;
+    }
+    @media screen and (min-width:1280px) {
+        max-width: 1280px;
+    }
+    /* outline: 1px solid red; */
+}
+////////////////////////////////////////
+.advantages-title {
+    color: aqua;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.advantages-list {   
+   display: flex;
+   flex-direction: column;
+}
+.advantages-item {
+    padding-right: 70px;
+    padding-left: 20px;
+}
+.advantages-item:not(:last-child) {
+    margin-bottom: 32px;
+}
+.advantages-item::before {
+    content: url('/images/icon1.png');
+    width: 33px;
+    height: 50px;
+}
+.advantages-text {
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 170%;
+    color: #000000;
+
+}
+.advantages-text-sp { 
+    display: block;
+    font-size: 36px;
+    line-height: 1.139;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #D41443;
+}
